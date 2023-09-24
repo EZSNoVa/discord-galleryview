@@ -52,11 +52,12 @@ export const actions: Actions = {
         // check if a gallery with this id exists
         const db = await get_db();
 
-        if (db[channel_id]) {
-            return {
-                error: 'A gallery with this id already exists. To overwrite it, use bot commands.',
-            }
-        }
+        // This is annyoing
+        // if (db[channel_id]) {
+        //     return {
+        //         error: 'A gallery with this id already exists. To overwrite it, use bot commands.',
+        //     }
+        // }
 
         // Get the images and channel name
         let result = await get_channel(token, channel_id, parseInt(amount));
